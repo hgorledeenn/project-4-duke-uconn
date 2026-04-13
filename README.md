@@ -2,6 +2,8 @@
 Created by **[Holden Green](https://hgorledeenn.github.io)** in April 2026 <br>
 Columbia Journalism School, Data Studio
 <br>
+<br><br>
+>### This project represents a number of firsts for me – it's my first scrolytelling piece, my first time doing motion graphics/animation in Adobe After Effects and my first time embedding a YouTube video to a website. Below, see how I completed each step and how everything came together for the finished product.
 
 ## Contents:
 1. [The Project](#the-project)
@@ -17,7 +19,6 @@ Columbia Journalism School, Data Studio
 This project presents a point-by-point breakdown of the Duke vs UConn Elite Eight mens basketball game. I ([like many bracket competitors](https://www.ncaa.com/news/basketball-men/article/2026-03-19/duke-again-nations-top-pick-win-2026-ncaa-tournament)) had predicted that Duke would be the champions of the entire tournament. When UConn came back at the end of the match, overcoming a deficit that had been as high as 19 points, my bracket ended up busted.
 
 Perhaps out of some level of frustration – or simply due to the fact that I'd rather dive into the world of sports statistics than watch the Huskies trapse their way to victory – I wanted to understand what went wrong for Duke and why I would have to concede victory in my bracket pool.
-
 
 ><h3 align="left">
 >My <i>actual</i> 2026 March Madness bracket
@@ -87,37 +88,51 @@ df_first_half_top_scorers = df_first_half_points.groupby('player', as_index=Fals
 
 ## Visualization
 
-I made the 3 visualizations using in Plotnine in my notebook. That code can be found in [data_wrangling.ipynb](/data_wrangling.ipynb)
+I made the 3 visualizations using in Plotnine in my notebook. That code can be found in [data_wrangling.ipynb](/data_wrangling.ipynb). I then exported the visualizations as [.svg files](/plotnine_output/) and brought them into Adobe Illustrator for cleaning and further design.
 
-<p align="center">
-<img src="plotnine_output/uconn_drought_scores.svg" width=35%>
-<img src="plotnine_output/from_ggplot_points.svg" width=40%>
-<img src="plotnine_output/top_scorers_first_half_grps.svg" width=40%>
-</p>
-
-I exported the [svg files](/plotnine_output/)
-Whatever
+A few important changes I made were:
+- Making chart designs minimal so as to the viewers' attention the most important visual elements
+- Keeping colors and fonts consistent across charts to increase visual cohesion in the finished product
+- Adding range highlights to subtly direct attention without distracting from the chart content
 <br><br><br>
-
-
-
-<p align="center">
-    <img src="chart_pngs/uconn_drought_scores.png" width=30%>
-    <img src="chart_pngs/nice_chart_for_ae.png" width=30%>
-    <img src="chart_pngs/top_scorers_ind_first_half.png" width=30%>
-</p>
-
-
-Cleaned in Illustrator
+![/readme_assets/chart_diffs.png](/readme_assets/chart_diffs.png)
 
 <br>
 
 ## Animation
 
+This project represented many firsts for me. Most notably, though, this was my first time using Adobe After Effects.
+
+
 - After Effects
 - First time doing that
 - Applications for vertical video
 - Content Management/math to figure out how to order animation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <br>
 
