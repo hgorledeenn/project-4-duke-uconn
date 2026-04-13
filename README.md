@@ -48,17 +48,60 @@ Then, for each second in the game, I recorded:
 - `player`: Which player scored the points scored in that second
 - `team`: What team scored the points in that second
 
+<br>
+
+<p align="center">
+<img src="readme_assets/data_sheet.png" width=75%>
+</p>
+
 ### Wrangling in Python
 
-I exported the data I'd collected 
+I exported the data I'd collected as a [duke_uconn_game.csv](/data/duke_uconn_game.csv) and imported it into Python. My wrangling was pretty light – because I collected the data manually it was already mostly well-suited for the visualizations I had in mind.
 
+I created a few other dataframes from that data, including making two dataframes, one per team, analyzing scoring droughts (how long each team went between points).
+
+``` python
+df_uconn_only['scoring_droughts'] = df_uconn_only['universal'].shift(-1) - df_uconn_only['universal'
+
+df_duke_only['scoring_droughts'] = df_duke_only['universal'].shift(-1) - df_duke_only['universal']
+```
+
+| Measures *(seconds)* | Duke | UConn |
+| --- | --- | ---|
+| Longest Drought | 253 | 299 |
+| Mean Drought Length | 67.68 | 70 |
+| Median Drought Length | 48 | 47.5 |
+
+<br>
+I also made a dataframe that calculates the top scorers at halftime, a data point I was interested in visualizing for the final product.
+
+``` python
+df_first_half_points = df[(df['half']==1) & (df['player'].notna())]
+df_first_half_top_scorers = df_first_half_points.groupby('player', as_index=False).agg({
+    'team': 'first',
+    'individual_points': 'sum'
+    })
+```
 
 <br>
 
 ## Visualization
 
-- Made in plotnine
-- Cleaned in Illustrator
+I made the 3 visualizations I ended up using in Plotnine. That code can be found in [data_wrangling.ipynb](/data_wrangling.ipynb)
+
+<p align="center">
+<img src="plotnine_output/uconn_drought_scores.svg" width=30%>
+<img src="plotnine_output/from_ggplot_points.svg" width=30%>
+<img src="plotnine_output/top_scorers_first_half_grps.svg" width=30%>
+</p>
+<p align="center">
+    <img src="chart_pngs/uconn_drought_scores.png" width=30%>
+    <img src="chart_pngs/nice_chart_for_ae.png" width=30%>
+    <img src="chart_pngs/top_scorers_ind_first_half.png" width=30%>
+</p>
+
+
+Cleaned in Illustrator
 
 <br>
 
