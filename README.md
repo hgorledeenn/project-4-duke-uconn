@@ -7,9 +7,6 @@ Columbia Journalism School, Data Studio
 *This project represents a number of firsts for me – it's my first scrolytelling piece, my first time doing motion graphics/animation in Adobe After Effects and my first time embedding a YouTube video to a website. Below, see how I completed each step and how everything came together for the finished product.*
 
 ## Contents:
-
-*This project represents a number of firsts for me – it's my first scrolytelling piece, my first time doing motion graphics/animation in Adobe After Effects and my first time embedding a YouTube video to a website. Below, see how I completed each step and how everything came together for the finished product.*
-
 1. [The Project](#the-project)
 2. [Data Collection and Wrangling](#data-collection-and-wrangling)
 3. [Visualization](#visualization)
